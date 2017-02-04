@@ -1,0 +1,87 @@
+@font-face {
+	font-family: myfirst;
+	src: url(Dosis-Regular.ttf);
+}
+@font-face {
+	font-family: myfirst1;
+	src: url(PoiretOne-Regular.ttf);
+}
+
+.header{
+	background-color: #33404d;
+	max-width: 110%;
+margin-left: -8px;
+margin-right: -8px;
+	height: 100px;
+	margin-top: -20px;
+
+}
+	ul {
+    list-style-type: none;
+   
+}
+
+li {padding-top: 30px;
+   float:left;
+    width: 90px;
+}
+
+
+li a{
+    display: block;
+    color: #33404d;
+    text-align: center;
+    padding: 7px 15px;
+    text-decoration: none;
+    background-color: white;
+    font-family: myfirst;
+}
+.active {
+	
+   font-size:250%;
+   color:white;
+   width:60%;
+  text-shadow: 2px 4px #181818;
+   font-family: myfirst1;
+}
+.notactive{
+	float:right;
+	padding-top: 20px;
+	margin-right: 10px;
+}
+
+.last{margin-top: 30px;
+  background-color: white;
+  max-width: 100%;
+  height: 200px;
+}
+.lastone{
+  width:45%;
+  height: 80%;
+  background-color: #33404d; 
+  float:left;
+  margin-top: 1.5%;
+  margin-left: 3.3%;
+ 
+}
+
+@media(max-width: 600px){
+ 
+  
+      li{
+        float:none;
+        width: 50%;
+     margin-left: -20px;
+     border:1px solid #33404d;
+
+      }
+      .active{width: 100%;text-align: center;}
+      .notactive{float: left;}
+    
+
+}
+   
+
+
+
+
