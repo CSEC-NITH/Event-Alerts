@@ -1,3 +1,9 @@
+<?php
+  session_start();
+  if(isset($_SESSION["user"])){
+    header('location: studentPanel.php');
+  }
+?>
 <html>
      <head>
      	<title>Notice-Board</title>
@@ -54,7 +60,7 @@
 </div>
   <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="action_page.php">
+  <form class="modal-content animate" action="./login.php" method="POST">
     
 
     <div class="container">
@@ -76,21 +82,21 @@
 </div>
   <div id="id02" class="modal1">
   
-  <form class="modal-content animate" action="action_page.php">
+  <form class="modal-content animate" action="./signup.php" method="POST">
     
 
     <div class="container">
       <label style="font-family:Arial;">Name</label>
       <input type="text" placeholder="Enter Name" name="name" required>
+      <label style="font-family:Arial;">Roll No.</label>
+      <input type="text" placeholder="Enter Roll No." name="rollno">
       <label style="font-family:Arial;">Username</label>
       <input type="text" placeholder="Enter Username" name="uname" required>
-        <label style="font-family:Arial;">Roll No.</label>
-        <input type="text" placeholder="Enter Roll No" name="rollno" required>
       <label style="font-family:Arial;">Email</label>
       <input type="email" placeholder="Enter Email" name="email" required>
       
  <label style="font-family:Arial;">Phone No.</label>
-      <input type="number" placeholder="Enter Phone No" name="contact" required>
+      <input type="number" placeholder="Enter Phone No" name="phone" required>
 
       <label style="font-family:Arial;">Password</label>
       <input type="password" placeholder="Enter Password" name="psw" required>
@@ -107,7 +113,6 @@
 </div>
 
 <script>
-
 // Get the modal
 var modal = document.getElementById('id01');
 var modal1 = document.getElementById('id02');
