@@ -1,0 +1,96 @@
+#menu {
+    height: 55px;
+    width: 100%;
+    background-color: #33404d;
+    border: black 2px solid;
+}
+#combine {
+    height: auto;
+    width: 100%;
+}
+#profile {
+    width: 100%;
+    height: 100%;
+    border: black 1px solid;
+    float: left;
+    background-color: aliceblue;
+}
+#notice {
+    width: 100%;
+    height: 100%;
+    border: black 1px solid;
+    float: right;
+}
+#pp {
+    width: 12%;
+    height: auto;
+    align-self: center;
+    margin-top: 3%;
+    border: blueviolet 2px solid;
+}
+#ptext{
+    font-size: 90%;
+    font-stretch: ultra-condensed;
+}
+#ntext{
+    font-size: 90%;
+}
+#lbutton{
+
+    color: white;
+    padding-right: 1%;
+    width: auto;
+    display: inline;
+    float: right;
+    background-color: #33404d;
+}
+#rubutton{
+    padding-left: 1%;
+    color: white;
+    width: auto;
+    display: inline;
+    float: left;
+    background-color: #33404d;
+}
+#mnbutton{
+    padding-left: 1%;
+    color: white;
+    width: auto;
+    display: inline;
+    float: left;
+    background-color: #33404d;
+}
+#ltext{
+    color: white;
+    text-decoration-line: unset;
+}
+#ltext:hover {
+    color: khaki;
+}
+#ntext{
+    padding-left: 2%;
+    font-family: "Arial Black";
+    font-size: 100%;
+}
+table{
+    border: black 1px solid;
+    width: 100%;
+    color: white;
+    background-color: aliceblue;
+    text-align: center;
+}
+tr{
+    background-color: cadetblue;
+    font-family: "Arial";
+}
+td{
+    border: black 1px solid;
+    padding: 1%;
+}
+thead{
+    color: black;
+}
+#userinfo{
+    text-align: center;
+    font-family: Georgia;
+}
