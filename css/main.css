@@ -11,9 +11,8 @@
 #profile {
     width: 100%;
     height: 100%;
-    border: black 1px solid;
     float: left;
-    background-color: aliceblue;
+    margin-top: 50px;
 }
 #notice {
     width: 100%;
@@ -22,15 +21,25 @@
     float: right;
 }
 #pp {
-    width: 12%;
+    width: 50%;
     height: auto;
     align-self: center;
     margin-top: 3%;
     border: blueviolet 2px solid;
 }
+#ppDiv{
+    float: left;
+    display: inline-block;
+}
+#info{
+    float: left;
+    display: inline-block;
+    margin: 7%;
+}
 #ptext{
-    font-size: 90%;
+    font-size: 30px;
     font-stretch: ultra-condensed;
+    font-family: arial;
 }
 #ntext{
     font-size: 90%;
@@ -93,4 +102,13 @@ thead{
 #userinfo{
     text-align: center;
     font-family: Georgia;
+}
+#notificationDiv{
+    margin: 10px;
+    border: black 1px solid;
+    color: white;
+    background-color: cadetblue;
+}
+#updatepp{
+    display: inline;
 }

@@ -1,23 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ndodwaria
- * Date: 2/4/17
- * Time: 3:05 PM
- */
-include('conn.php');
-$sendto = $_POST['to'];
-$message = $_POST['noticetext'];
+	include('conn.php');
 
-$sql="insert into MESSAGE(SEND_TO,MESSAGE) VALUES('".$sendto."','".$message."')";
-
-//$result=$conn->query($sql);
-
-if($conn->query($sql) === TRUE)
-{
+	session_start();
+	$_SESSION['USER']="narendra36";
+	$username = $_SESSION['USER'];
 	$target_dir = "../images/";
-	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	//$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	$target_file = $target_dir .$username.".jpg";
 	$uploadOk = 1;
+	echo "target_file : ".$target_file;
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 	// Check if image file is a actual image or fake image
 	//echo $imageFileType;
@@ -34,8 +25,9 @@ if($conn->query($sql) === TRUE)
 	// Check if file already exists
 
 	if (file_exists($target_file)) {
-	    echo "Sorry, file already exists.";
-	    $uploadOk = 0;
+	    //echo "Sorry, file already exists.";
+	    unlink($target_file);
+	    $uploadOk = 1;
 	}
 
 	// Check file size
@@ -57,12 +49,11 @@ if($conn->query($sql) === TRUE)
 	    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 	        //echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.<br>";
 	        //echo "<img src=\"".$target_file."\" />";
-	        echo "<script type='text/javascript'>alert('Message Sent');window.location.href='adminPanel.php';</script>";
+	        echo "<script type='text/javascript'>alert('Profile Updated Successfully');window.location.href='studentDashboard.php';</script>";
 
 	    } 
 	    else {
 	        echo "Sorry, there was an error uploading your file.";
 	    }
-	}    
-}
-else{ echo "ERROR:".$conn->error; exit;}
+	}
+?>
