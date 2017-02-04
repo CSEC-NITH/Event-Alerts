@@ -3,7 +3,7 @@
 	// $username="root";
 	// $pwd="nitin";
 	// $database='HACKTHON';
-	$conn=mysqli_connect('localhost','root','nitin','HACKATHON');
+	$conn=mysqli_connect('localhost','root','atul1234','HACKATHON');
 	if(!$conn){
 		die("Connection Error".mysqli_connect_error());
 	}
@@ -17,7 +17,6 @@
 	if(mysqli_num_rows($retval)>0){
 		session_start();
 		$_SESSION["user"]=$user_name;
-		echo "Login Successful";
 		header("location: ./studentPanel.php");
 	}
 	else{
