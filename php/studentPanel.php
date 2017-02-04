@@ -6,7 +6,7 @@
  * Time: 5:57 PM
  */
     session_start();
-    $conn=mysqli_connect('localhost','root','nitin','HACKATHON');
+    $conn=mysqli_connect('localhost','root','atul1234','HACKATHON');
     if(!$conn){
         die("Connection Error");
     }
@@ -24,11 +24,7 @@
     }
 ?>
 
-<?php
-    $query='select * from MESSAGE where SEND_TO="'.$username.'"';
-    $retval=mysqli_query($conn,$query);
-    if(mysqli_num_rows($retval)>0){
-?>
+
 <!doctype html>
 <html>
 <head>
@@ -54,7 +50,11 @@
                 <thead>
                     <td>Sender</td><td>Message</td><td>Date</td>
                 </thead>
-                <?php
+               <?php
+                   $query='select * from MESSAGE where SEND_TO="'.$username.'"';
+                   $retval=mysqli_query($conn,$query);
+                   if(mysqli_num_rows($retval)>0){
+
                     while($row=mysqli_fetch_assoc($retval)){
                 ?>
                 <tr>
