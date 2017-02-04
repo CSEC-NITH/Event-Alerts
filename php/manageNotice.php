@@ -9,14 +9,13 @@
 <center>
 <div id="sendNotice" >
     <p style="width: 90%">Send Notice : </p>
-    <form>
+    <form action="sendMessage.php" method="POST" enctype="multipart/form-data">
     <table>
         <tr><td><label for="to">To</label></td>
             <td><input id="to" type="text" name="to"></td></tr>
-        <tr><td><label for="links" >Link </label></td>
-            <td><input id="links" type="url" name="links"></td></tr>
+
         <tr><td><label for="image">Choose Image </label></td>
-            <td><input id="image" type="file" name="image"></td></tr>
+            <td> <input type="file" name="fileToUpload" id="fileToUpload" /></td></tr>
          <tr><td><label for="noticetext">Notice </label></td>
              <td><textarea id="noticetext" rows="4" cols="30" name="noticetext" placeholder="Enter your message here"></textarea></td></tr>
     </table>

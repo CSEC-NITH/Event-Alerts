@@ -5,41 +5,39 @@
  * Date: 2/3/17
  * Time: 6:22 PM
  */
-session_start();
-	if(isset($_SESSION['uname']) && isset($_SESSION['pass']))
-    {
+    session_start();
+	//if(isset($_SESSION['user']))
+    //{
         require 'conn.php';
 
-        $sql2 = "SELECT * FROM userinfo";
-        $result = $conn->query($sql2);
-
+        $sql = "SELECT * FROM USER";
+        $result = $conn->query($sql);
+        //echo $result." ";
         if ($result->num_rows > 0) {
             // output data of each row
             ?>
-            <!--<center><table style="border: 3px solid #f1f1f1;">
-                    <tr><th>ID</th><th>Name</th><th>Age</th><th>Email</th><th>Contact</th><th>Field</th><th>Gender</th><th>Date</th><th>Description</th</tr>
-
+            <center><table style="border: 3px solid black; background:#33404d;color:white;">
+                    <tr><th>ID</th><th>USERNAME</th><th>NAME</th><th>ROLL NO</th><th>EMAIL</th>
                     <?php
                     while($row = $result->fetch_assoc()) {
 
                         ?>
-                        <tr><td><?php echo $row["p_id"]."" ?></td><td><?php echo $row["name"]."" ?></td><td><?php echo $row["age"]."" ?></td>
-                            <td><?php echo $row["email"]."" ?></td><td><?php echo $row["contact"]."" ?></td><td><?php echo $row["field"]."" ?></td>
-                            <td><?php echo $row["sex"]."" ?></td><td><?php echo $row["dt"]."" ?></td><td><?php echo $row["description"]."" ?></td></tr>
+                        <tr><td><?php echo $row["ID"]."" ?></td><td><?php echo $row["USERNAME"]."" ?></td>
+                            <td><?php echo $row["NAME"]."" ?></td><td><?php echo $row["ROLL_NO"]."" ?></td>
+                            <td><?php echo $row["EMAIL"]."" ?></td></tr><br>
                         <?php
                     }
                     ?>
                 </table></center>
             <?php
-        } else {
+        } 
+        else {
             echo "0 results";
         }
         //echo $drname."<br>";
         $conn->close();
         //echo $drname."<br>";
-    }
+    /*}
     else
         header("Location: index.php");
-	?>
-</body>
-</html>
+	?>*/

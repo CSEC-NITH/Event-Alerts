@@ -28,12 +28,27 @@
                     xmlhttp.send();
                 }
             }
+            function showList(str) {
+                if (str.length == 0) {
+                    document.getElementById("txtHint").innerHTML = "";
+                    return;
+                } else {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            document.getElementById("forForm").innerHTML = this.responseText;
+                        }
+                    };
+                    xmlhttp.open("GET", "registeredUser.php?q=1", true);
+                    xmlhttp.send();
+                }
+            }            
         </script>
     </head>
     <body>
     <div id="menu">
         <div id="rubutton">
-            <p><a href="registeredUser.php" id="ltext">Registered Users</a></p>
+            <p><a onclick="showList('showme')"  id="ltext">Registered Users</a></p>
         </div>
         <div id="mnbutton">
             <p><a onclick="showForm('showme')" id="ltext">Manage Notification</a></p>
