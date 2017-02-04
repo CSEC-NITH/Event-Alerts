@@ -13,6 +13,7 @@
 	/*background: green;*/
 	width: 100%;
 	height: 80px;
+	position: fixed;
 }
 
 .appName{
@@ -23,11 +24,11 @@
 }
 
 .appName>span{
-	font-size: 30px;
+	font-size: 130%;
 	color: white;
 	/*background: green;*/
 	position: absolute;
-	left: 4%;
+	left: 2%;
 	top: 20px;
 }
 
@@ -62,8 +63,10 @@
 
 .sideBar{
 	width: 20%;
-	height: 525px;
+	height: 100%;
 	background: #182838;
+	position: fixed;
+	top:80px;
 }
 
 .profile_image{
@@ -90,7 +93,8 @@
 	/*background: green;*/
 	color: white;
 	font: 18px georgia;
-	margin-top: 10px;
+
+	
 }
 
 .list_element{
@@ -110,23 +114,23 @@
 }
 
 .home{
-	top: 350px;
+	
 }
 
 .profile{
-	top: 400px;
+	
 }
 
 .chat{
-	top: 450px;
+	
 }
 
 .feedback{
-	top: 500px;
+	
 }
 
 .logout{
-	top: 550px;
+
 }
 
 .list_element>a{
@@ -136,3 +140,28 @@
 	font: 17px georgia;
 }
 
+.mainContent {
+	background-color: #D3D3D3;
+	width: 80%;
+	height: 1600px;
+	position: relative;
+	left: 20%;
+	top: 80px;
+	z-index: -2;
+}
+@media(max-width: 700px){
+	.sideBar{
+	width: 140px;
+	
+}
+.mainContent {
+	
+	
+	left: 21%;
+	
+}
+.list{
+	margin-top: -60px;
+}
+
+}
