@@ -5,6 +5,29 @@
  * Date: 2/2/17
  * Time: 5:57 PM
  */
+    session_start();
+    $conn=mysqli_connect('localhost','root','nitin','HACKATHON');
+    if(!$conn){
+        die("Connection Error");
+    }
+    $username=$_SESSION["user"];
+    $query='select * from USER where USERNAME="'.$username.'"';
+    $retval=mysqli_query($conn,$query);
+    if(mysqli_num_rows($retval)==1){
+        $data=mysqli_fetch_assoc($retval);
+        $name=$data['NAME'];
+        $rollno=$data['ROLL_NO'];
+        $email=$data['EMAIL'];
+    }
+    else{
+        header('location: home.php');
+    }
+?>
+
+<?php
+    $query='select * from MESSAGE where SEND_TO="'.$username.'"';
+    $retval=mysqli_query($conn,$query);
+    if(mysqli_num_rows($retval)>0){
 ?>
 <!doctype html>
 <html>
@@ -21,9 +44,9 @@
     <div id="combine">
         <div id="profile">
             <center><img  id="pp" src="../images/2.jpg" alt="profile Pic" >
-            <p id="ptext">Narendra Dodwaria</p>
-            <p id="ptext">Roll No : 14MI536</p>
-            <p id="ptext">narendra.dodwaria@gmail.com</p></center>
+            <p id="ptext"><?php echo $name;?></p>
+            <p id="ptext">Roll No : <?php echo $rollno;?></p>
+            <p id="ptext"><?php echo $email;?></p></center>
         </div>
         <div id="notice">
             <h1 id="ntext">Notices : </h1>
@@ -31,16 +54,20 @@
                 <thead>
                     <td>Sender</td><td>Message</td><td>Date</td>
                 </thead>
+                <?php
+                    while($row=mysqli_fetch_assoc($retval)){
+                ?>
                 <tr>
-                    <td id="sender">Nandu</td><td id="message">Hello Guys Hello Guys Hello Guys</td><td id="date">3-feb-2017</td>
+                    <td id="sender">ME</td><td id="message"><?php echo $row['MESSAGE'];?></td><td id="date"><?php echo $row['DATE'];?></td>
                 </tr>
-                <tr>
-                    <td id="sender">Nandu</td><td id="message">Hello Guys</td><td id="date">3-feb-2017</td>
-                </tr>
+                <?php
+                    }
+                ?>
             </table>
+            <?php
+            }
+            ?>
         </div>
     </div>
 </body>
 </html>
-<?php
-
