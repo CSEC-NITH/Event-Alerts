@@ -2,7 +2,7 @@
 session_start();
 		$servername = "localhost";
 		$username = "root";
-		$password = "atul1234";
+		$password = "nd123.in";
 		$dbname = "HACKATHON";
 		$conn = new mysqli($servername, $username, $password, $dbname);
 		//echo "Mukesh";

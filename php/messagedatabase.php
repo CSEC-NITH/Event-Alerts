@@ -3,7 +3,7 @@
 session_start();
 		$servername = "localhost";
 		$username = "root";
-		$password = "atul1234";
+		$password = "nd123.in";
 		$dbname = "HACKATHON";
 		$conn = new mysqli($servername, $username, $password, $dbname);
 		//echo "Mukesh";
@@ -26,7 +26,7 @@ session_start();
 				<?php
 				while($row = $result->fetch_assoc()) {
            
-					echo "<div class = 'msg'><tr  style='background-color:#909090;font-size:16px;'><td style='width:20%;'>".$row["USERNAME"]."</td><td style='width:60%;'>".$row["MESSAGE"]."</td><td> ".$row[DATE]."</td></tr></div>";
+					echo "<div class = 'msg'><tr  style='background-color:#909090;font-size:16px;'><td style='width:20%;'>".$_SESSION['user']."</td><td style='width:60%;'>".$row["MESSAGE"]."</td><td> ".$row[DATE]."</td></tr></div>";
 				
 				}
 			}

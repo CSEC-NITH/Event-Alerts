@@ -3,7 +3,7 @@
 	// $username="root";
 	// $pwd="nitin";
 	// $database='HACKTHON';
-	$conn=mysqli_connect('localhost','root','atul1234','HACKATHON');
+	$conn=mysqli_connect('localhost','root','nd123.in','HACKATHON');
 	if(!$conn){
 		die("Connection Error".mysqli_connect_error());
 	}

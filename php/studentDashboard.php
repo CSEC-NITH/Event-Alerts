@@ -72,7 +72,7 @@
 
 		<div class="sideBar">
 			<div class="profile_image">
-				<img src="../images/nitin.jpg" width="273px" height="250px" >
+				<img src="../images/profile.png" width="273px" height="250px" >
 			</div>
 			<div class="list">
 				<div class="list_element"><img src="../images/home.png" width="25px" height="25px" class="home"><a onclick="showNotification('showme')">Home</a></div>
