@@ -3,7 +3,7 @@
 	// $username="root";
 	// $pwd="nitin";
 	// $database='HACKTHON';
-	$conn=mysqli_connect('localhost','root','atul1234','HACKATHON');
+	$conn=mysqli_connect('localhost','root','nitin','HACKATHON');
 	if(!$conn){
 		die("Connection Error".mysqli_connect_error());
 	}
@@ -17,9 +17,9 @@
 	if(mysqli_num_rows($retval)>0){
 		session_start();
 		$_SESSION["user"]=$user_name;
-		header("location: ./studentPanel.php");
+		header("location: ./studentDashboard.php");
 	}
 	else{
-		echo "User not found";
+		echo "<script type='text/javascript'>alert('Username or Password is incorrect');window.location.href='../index.php';</script>";
 	}
 ?>
