@@ -77,7 +77,7 @@
 			<div class="list">
 				<div class="list_element"><img src="../images/home.png" width="25px" height="25px" class="home"><a onclick="showNotification('showme')">Home</a></div>
 				<div class="list_element"><img src="../images/profile.png" width="25px" height="25px" class="profile"><a onclick="showProfile('showme')">Profile</a></div>
-				<div class="list_element"><img src="../images/chat.png" width="28px" height="25px" class="chat"><a href="#">Chat</a></div>
+				<div class="list_element"><img src="../images/chat.png" width="28px" height="25px" class="chat"><a href="chatbox.php" target="_blank">Chat</a></div>
 				<div class="list_element"><img src="../images/feedback.gif" width="25px" height="25px" class="notification"><a onclick="showAbout('showme')">About</a></div>
 				<div class="list_element"><img src="../images/logout.png" width="25px" height="25px" class="logout"><a href="./logout.php">Logout</a></div>
 			</div>

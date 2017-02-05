@@ -9,7 +9,7 @@
     if(!isset($_SESSION["user"])){
         header('location: ../index.php');
     }
-    $conn=mysqli_connect('localhost','root','nitin','HACKATHON');
+    $conn=mysqli_connect('localhost','root','atul1234','HACKATHON');
     if(!$conn){
         die("Connection Error");
     }
