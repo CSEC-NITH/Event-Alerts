@@ -6,11 +6,13 @@
  * Time: 5:57 PM
  */
     session_start();
-    $conn=mysqli_connect('localhost','root','nd123.in','HACKATHON');
+    if(!isset($_SESSION["user"])){
+        header('location: ../index.php');
+    }
+    $conn=mysqli_connect('localhost','root','nitin','HACKATHON');
     if(!$conn){
         die("Connection Error");
     }
-    $_SESSION['user']="narendra36";
     $username=$_SESSION["user"];
     $query='select * from USER where USERNAME="'.$username.'"';
     $retval=mysqli_query($conn,$query);

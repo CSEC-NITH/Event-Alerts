@@ -8,7 +8,7 @@
 session_start();
 $_SESSION['user']="hello";
 if(isset($_SESSION['user'])){
-    $conn=mysqli_connect('localhost','root','nd123.in','HACKATHON');
+    $conn=mysqli_connect('localhost','root','nitin','HACKATHON');
     if(!$conn){
         die("Connection Error");
     }
