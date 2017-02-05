@@ -56,11 +56,12 @@
 				<div class="list_element"><img src="../images/home.png" width="25px" height="25px" class="home"><a href="#">Home</a></div>
 				<div class="list_element"><img src="../images/profile.png" width="25px" height="25px" class="profile"><a onclick="showProfile('showme')">Profile</a></div>
 				<div class="list_element"><img src="../images/chat.png" width="28px" height="25px" class="chat"><a href="#">Chat</a></div>
-				<div class="list_element"><img src="../images/feedback.png" width="25px" height="25px" class="notification"><a onclick="showNotification('showme')">Feedback</a></div>
+				<div class="list_element"><img src="../images/feedback.gif" width="25px" height="25px" class="notification"><a onclick="showNotification('showme')">About</a></div>
 				<div class="list_element"><img src="../images/logout.png" width="25px" height="25px" class="logout"><a href="#">Logout</a></div>
 			</div>
 		</div>
 		<div class = "mainContent" id="content">
+            
 
 		</div>
 	</div>
