@@ -2,7 +2,7 @@
 	include('conn.php');
 
 	session_start();
-	$_SESSION['USER']="narendra36";
+	
 	$username = $_SESSION['USER'];
 	$target_dir = "../images/";
 	//$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);

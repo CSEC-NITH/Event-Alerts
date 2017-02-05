@@ -4,7 +4,7 @@
 	// $pwd="nitin";
 	// $database='HACKTHON';
 	// echo "Signup";
-	$conn=mysqli_connect('localhost','root','nitin','HACKATHON');
+	$conn=mysqli_connect('localhost','root','atul1234','HACKATHON');
 	if(!$conn){
 		die("Connection Error".mysqli_connect_error());
 	}

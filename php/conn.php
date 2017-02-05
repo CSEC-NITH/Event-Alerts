@@ -5,7 +5,7 @@
  * Date: 2/3/17
  * Time: 6:28 PM
  */
-$conn = new mysqli("localhost",'root','nitin','HACKATHON');
+$conn = new mysqli("localhost",'root','atul1234','HACKATHON');
 if($conn){
     //echo "connection succussefully made";
 }

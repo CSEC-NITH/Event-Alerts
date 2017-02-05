@@ -1,0 +1,55 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background: #c1bdba;
+  font-family: 'Titillium Web', sans-serif;
+}
+.form {
+  background: rgba(19, 35, 47, 0.9);
+ width:60%;
+ overflow: hidden;
+ margin:10px;
+ padding:10px;
+ font-family: Arial,sans-serif;
+ font-size: 14px;
+ margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+.chatsection{
+	overflow:hidden;
+	height: 500px;
+	border:1px solid #ccc;
+	margin-bottom: 10px;
+	background-color: white;
+	 
+
+}
+.messagesection{
+overflow:hidden;
+}
+#messagefield{
+ border:1px solid #ccc;
+ padding:5px;
+ font-size: 18px;
+ width:100%;
+ outline: none;
+
+}	
+.sendbutton{
+	border:none;
+	padding:5px;
+	font-size:16px;
+	width:100%;
+	background-color: #1ab188;
+	color:#FFFFFF;
+	margin-left: 10px;
+}
+div .one{
+	float:left;
+}
