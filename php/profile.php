@@ -11,12 +11,12 @@
     }
     $conn=mysqli_connect('localhost','root','atul1234','HACKATHON');
     if(!$conn){
-        die("Connection Error");
+        die("Connection Error".mysqli_connect_error());
     }
     $username=$_SESSION["user"];
     $query='select * from USER where USERNAME="'.$username.'"';
     $retval=mysqli_query($conn,$query);
-    if(mysqli_num_rows($retval)==1){
+    if(mysqli_num_rows($retval)>0){
         $data=mysqli_fetch_assoc($retval);
         $name=$data['NAME'];
         $rollno=$data['ROLL_NO'];
