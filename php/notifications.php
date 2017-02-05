@@ -6,7 +6,7 @@
  * Time: 5:57 PM
  */
 session_start();
-$_SESSION['user']="ABHI";
+$_SESSION['user']="hello";
 if(isset($_SESSION['user'])){
     $conn=mysqli_connect('localhost','root','nd123.in','HACKATHON');
     if(!$conn){
@@ -19,7 +19,8 @@ if(isset($_SESSION['user'])){
         <?php
            
             $username=$_SESSION['user'];
-            $query='select * from MESSAGE where SEND_TO="'.$username.'"';
+            //$query='select * from MESSAGE where SEND_TO="'.$username.'"';
+            $query='select * from MESSAGE';
             $retval=mysqli_query($conn,$query);
                    if(mysqli_num_rows($retval)>0){
 
@@ -27,10 +28,30 @@ if(isset($_SESSION['user'])){
                 ?>
                <!--  <div id="notificationDiv">
                     <img src="../images/ext.jpg" width="10%" height="10%">
-                    <p><?php echo $row['MESSAGE'];?></p>
-                    <p><?php echo $row['DATE'];?></p>
+                    <p></p>
+                    <p><?php //echo $row['DATE'];?></p>
                 </div> -->
-                
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <link rel="stylesheet" type="text/css" href="../css/home">
+                    </head>
+                    <body>
+                        <div class="dynamic">
+                            <div class="content">
+                                <div class="content_image"><img src=<?php echo '"../images/'.$row['IMAGE_NAME'].'"';?> width="350px" height="350px"></div>
+                                <div class="desc" align="center">
+                                    <div class="event_title"><h1><?php echo $row['TITLE'];?></h1></div>
+                                    <div class="event_desc">
+                                    <p><?php echo $row['MESSAGE'];?></p>
+                                    </div>
+                                    <div class="link_button"><a href=<?php echo '"'.$row['LINK'].'"';?> >Register</a></div>
+                                </div>       
+                            </div>
+                        </div>                
+                    </body>
+                    </html>                
                 <?php
                     }
                 ?>
@@ -48,7 +69,7 @@ if(isset($_SESSION['user'])){
         }
     ?>
 
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -89,5 +110,5 @@ if(isset($_SESSION['user'])){
         </div>
     </div>
 </body>
-</html>
+</html> -->
   

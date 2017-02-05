@@ -9,8 +9,9 @@ include('conn.php');
 $sendto = $_POST['to'];
 $message = $_POST['noticetext'];
 $link =$_POST['link'];
+$title =$_POST['title'];
 $imgname=basename($_FILES["fileToUpload"]["name"]);
-$sql="insert into MESSAGE(SEND_TO,MESSAGE,IMAGE_NAME,LINK) VALUES('".$sendto."','".$message."','".$imgname."','".$link."')";
+$sql="insert into MESSAGE(SEND_TO,MESSAGE,IMAGE_NAME,LINK,TITLE) VALUES('".$sendto."','".$message."','".$imgname."','".$link."','".$title."')";
 
 //$result=$conn->query($sql);
 

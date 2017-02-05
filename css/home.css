@@ -145,7 +145,7 @@
 .mainContent {
 	background-color: #D3D3D3;
 	width: 80%;
-	height: 1600px;
+	height: auto;
 	position: relative;
 	left: 20%;
 	top: 80px;
