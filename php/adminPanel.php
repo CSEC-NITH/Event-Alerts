@@ -46,6 +46,7 @@
         </script>
     </head>
     <body>
+<div id="outermost" style="background:#e5ccff;">    
     <div id="menu">
         <div id="rubutton">
             <p><a onclick="showList('showme')"  id="ltext">Registered Users</a></p>
@@ -78,6 +79,7 @@
         </div>
     </div>
     </div>
+</div>
     </body>
     </html>
 <?php

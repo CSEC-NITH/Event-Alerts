@@ -8,8 +8,9 @@
 include('conn.php');
 $sendto = $_POST['to'];
 $message = $_POST['noticetext'];
-
-$sql="insert into MESSAGE(SEND_TO,MESSAGE) VALUES('".$sendto."','".$message."')";
+$link =$_POST['link'];
+$imgname=basename($_FILES["fileToUpload"]["name"]);
+$sql="insert into MESSAGE(SEND_TO,MESSAGE,IMAGE_NAME,LINK) VALUES('".$sendto."','".$message."','".$imgname."','".$link."')";
 
 //$result=$conn->query($sql);
 
@@ -34,8 +35,8 @@ if($conn->query($sql) === TRUE)
 	// Check if file already exists
 
 	if (file_exists($target_file)) {
-	    echo "Sorry, file already exists.";
-	    $uploadOk = 0;
+	    //echo "Sorry, file already exists.";
+	    $uploadOk = 1;
 	}
 
 	// Check file size
@@ -44,7 +45,7 @@ if($conn->query($sql) === TRUE)
 	    $uploadOk = 0;
 	}
 	// Allow certain file formats
-	if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+	if($imageFileType != "jpg" && $imageFileType != "JPG" && $imageFileType != "png" && $imageFileType != "jpeg"
 	&& $imageFileType != "gif" ) {
 	    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
 	    $uploadOk = 0;
