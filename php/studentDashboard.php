@@ -76,8 +76,9 @@
 			</div>
 		</div>
 		<div class = "mainContent" id="content">
-            
-
+            <?php
+            include('notifications.php');
+            ?>
 		</div>
 	</div>
 </body>
