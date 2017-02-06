@@ -1,7 +1,8 @@
 <?php
-	include('conn.php');
+	
 
 	session_start();
+	include('conn.php');
 	
 	$username = $_SESSION['USER'];
 	$target_dir = "../images/";
@@ -49,7 +50,7 @@
 	    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 	        //echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.<br>";
 	        //echo "<img src=\"".$target_file."\" />";
-	        echo "<script type='text/javascript'>alert('Profile Updated Successfully');window.location.href='studentDashboard.php';</script>";
+	        echo "<script type='text/javascript'>alert('Profile Updated Successfully');window.location.href='./studentDashboard.php';</script>";
 
 	    } 
 	    else {

@@ -6,11 +6,11 @@
  * Time: 5:57 PM
  */
 session_start();
-$_SESSION['user']="hello";
+
 if(isset($_SESSION['user'])){
     $conn=mysqli_connect('localhost','root','nd123.in','HACKATHON');
     if(!$conn){
-        die("Connection Error");
+        die("Connection Error".mysqli_connect_error());
     }
     else{
 ?>
@@ -65,7 +65,7 @@ if(isset($_SESSION['user'])){
         }
         else
         {
-            header('Location: ../index.html');
+            header('Location: ../index.php');
         }
     ?>
 
