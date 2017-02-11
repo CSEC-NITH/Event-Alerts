@@ -9,7 +9,7 @@
     if(!isset($_SESSION["user"])){
         header('location: ../index.php');
     }
-    $conn=mysqli_connect('localhost','root','atul1234','HACKATHON');
+    $conn=mysqli_connect('localhost','root','nd123.in','HACKATHON');
     if(!$conn){
         die("Connection Error".mysqli_connect_error());
     }
@@ -30,7 +30,7 @@
 
     <div id="profile">
         <div id="ppDiv">
-            <img  id="pp" src=<?php echo '"../images/'.$username.'.jpg"' ?> alt="profile Pic" >
+            <img  id="pp" src="../images/profile.png" alt="profile Pic" >
         </div>
         <div id="info">
             <p id="ptext">Name : <?php echo $name;?></p>
