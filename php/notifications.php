@@ -35,7 +35,7 @@ if(isset($_SESSION['user'])){
                     <html lang="en">
                     <head>
                         <meta charset="UTF-8">
-                        <link rel="stylesheet" type="text/css" href="../css/home">
+                        <link rel="stylesheet" type="text/css" href="../css/home.css">
                     </head>
                     <body>
                         <div class="dynamic">

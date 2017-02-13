@@ -28,7 +28,6 @@
     }
 ?>
 
-<center>
     <div id="profile">
         <div id="ppDiv">
             <img  id="pp" src="../images/profile.png" alt="profile Pic" >
@@ -51,4 +50,4 @@
             </form>
         </div>
     </div>
-</center>
+
