@@ -3,13 +3,17 @@
     if(!isset($_SESSION["user"])){
         header('location: ../index.php');
     }
+    include('conn.php');
+    $username = $_SESSION['user'];
+    $target_dir = "../images/";
+    $target_file = $target_dir .$username.".jpg";
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Home</title>
+	<title>Dashboard</title>
 	<link rel="stylesheet" type="text/css" href="../css/home.css">
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
      <script>
@@ -63,7 +67,7 @@
 <body>
 	<div class="main">
 		<div class="header">
-			<div class="appName" ><span>App Name</span></div>
+			<div class="appName" ><span>Event-Alerts</span></div>
 			<div class="search">
 				<input type="text" name="searchBar" class="searchBar" placeholder="search your friend....">
 				<img src="../images/search-btn.png" width="30px" height="30px">
@@ -73,8 +77,18 @@
 		<div class="sideBar">
 			<div class="profile_image">
 
-				<img src=<?php echo '"../images/'.$_SESSION['user'].'.jpg"' ?> height="250px" >
-
+                <?php
+                    if (file_exists($target_file)) {
+                        ?>
+                        <img src=<?php echo '"../images/'.$_SESSION['user'].'.jpg"' ?>  width="100%" height="100%">
+                        <?php
+                    }
+                    else{
+                        ?>
+                        <img src="../images/profile.png" width="100%" height="100%" >
+                        <?php
+                    }                    
+                ?>
 			</div>
 			<div class="list">
 				<div class="list_element"><img src="../images/home.png" width="25px" height="25px" class="home"><a onclick="showNotification('showme')">Home</a></div>

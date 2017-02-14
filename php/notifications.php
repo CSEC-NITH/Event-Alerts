@@ -23,7 +23,9 @@ if(isset($_SESSION['user'])){
             $query='select * from MESSAGE';
             $retval=mysqli_query($conn,$query);
                    if(mysqli_num_rows($retval)>0){
-
+                    ?>
+                    <div class="dynamic">
+                    <?php
                     while($row=mysqli_fetch_assoc($retval)){
                 ?>
                <!--  <div id="notificationDiv">
@@ -31,14 +33,7 @@ if(isset($_SESSION['user'])){
                     <p></p>
                     <p><?php //echo $row['DATE'];?></p>
                 </div> -->
-                    <!DOCTYPE html>
-                    <html lang="en">
-                    <head>
-                        <meta charset="UTF-8">
-                        <link rel="stylesheet" type="text/css" href="../css/home.css">
-                    </head>
-                    <body>
-                        <div class="dynamic">
+                        
                             <div class="content">
                                 <div class="content_image"><img src=<?php echo '"../images/'.$row['IMAGE_NAME'].'"';?> width="350px" height="350px"></div>
                                 <div class="desc" align="center">
@@ -49,14 +44,12 @@ if(isset($_SESSION['user'])){
                                     <div class="link_button"><a href=<?php echo '"'.$row['LINK'].'"';?> >Register</a></div>
                                 </div>       
                             </div>
-                        </div>                
-                    </body>
-                    </html>                
+                                     
                 <?php
                     }
-                ?>
-            </table>
-        <?php
+                 ?>
+                 </div>   
+                 <?php   
             }
             }
         ?>
