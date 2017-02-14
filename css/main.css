@@ -10,9 +10,11 @@
 }
 #profile {
     width: 100%;
-    height: 100%;
-    float: left;
+    height: auto;
     margin-top: 20px;
+    padding-bottom: 10px;
+    overflow: auto;
+    padding-top: 15px;
 }
 /*#notice {
     width: 100%;
@@ -21,26 +23,37 @@
     float: right;
 }*/
 #pp {
-    width: 20%;
-    height: 50%;
+    width: 100%;
+    height: auto;
     align-self: center;
     margin-top: 3%;
-    border: blueviolet 2px solid;
-    margin-left: 60px;
 }
-#ppDiv{
+
+#personalInfo {
+    width: 80%;
+    height: auto;
+    overflow: auto;
+    margin: 5%;
+    padding: 2%;
+    border: white 3px solid;
+}
+
+#ppDiv {
+    width: 30%;
+    height: 100%;
     float: left;
-    display: inline-block;
 }
-#info{
+#info {
+    width: 50%;
     float: left;
-    display: inline-block;
-    margin: 7%;
+    text-align: center;
+    margin: 2%;
+    margin-top: 10%;
 }
-#ptext{
-    font-size: 30px;
+#ptext {
+    font-size: 100%;
     font-stretch: ultra-condensed;
-    font-family: arial;
+    font-family: Trebuchet MS;
 }
 #ntext{
     font-size: 90%;

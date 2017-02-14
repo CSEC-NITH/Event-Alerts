@@ -14,12 +14,9 @@ if(isset($_SESSION['user'])){
     }
     else{
 ?>
-    <div id="notice">
-        <!-- <h1 id="ntext">Notifications : </h1> -->
         <?php
            
             $username=$_SESSION['user'];
-            //$query='select * from MESSAGE where SEND_TO="'.$username.'"';
             $query='select * from MESSAGE';
             $retval=mysqli_query($conn,$query);
                    if(mysqli_num_rows($retval)>0){
@@ -28,22 +25,17 @@ if(isset($_SESSION['user'])){
                     <?php
                     while($row=mysqli_fetch_assoc($retval)){
                 ?>
-               <!--  <div id="notificationDiv">
-                    <img src="../images/ext.jpg" width="10%" height="10%">
-                    <p></p>
-                    <p><?php //echo $row['DATE'];?></p>
-                </div> -->
                         
-                            <div class="content">
-                                <div class="content_image"><img src=<?php echo '"../images/'.$row['IMAGE_NAME'].'"';?> width="350px" height="350px"></div>
-                                <div class="desc" align="center">
-                                    <div class="event_title"><h1><?php echo $row['TITLE'];?></h1></div>
-                                    <div class="event_desc">
-                                    <p><?php echo $row['MESSAGE'];?></p>
-                                    </div>
-                                    <div class="link_button"><a href=<?php echo '"'.$row['LINK'].'"';?> >Register</a></div>
-                                </div>       
+                        <div class="content">
+                            <div class="content_image">
+                                <img src=<?php echo '"../images/'.$row['IMAGE_NAME'].'"'; ?> width="100%" height="100%">
                             </div>
+                            <div class="desc" align="center">
+                                <div class="event_title"><h1><?php echo $row['TITLE']; ?></h1></div>
+                                <div class="event_desc"><p><?php echo $row['MESSAGE']; ?></p></div>
+                                <div class="link_button"><a href=<?php echo '"'.$row['LINK'].'"';?> >Register</a></div>
+                            </div>       
+                        </div>
                                      
                 <?php
                     }
@@ -52,9 +44,7 @@ if(isset($_SESSION['user'])){
                  <?php   
             }
             }
-        ?>
-    </div>
-    <?php
+        
         }
         else
         {

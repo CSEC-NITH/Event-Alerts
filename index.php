@@ -6,7 +6,7 @@
 ?>
 <html>
      <head>
-     	<title>Notice-Board</title>
+     	<title>Event-Alerts</title>
      		<link rel="stylesheet" type="text/css" href="./css/firstcss.css">
      		<link rel="stylesheet" type="text/css" href="./css/design1.css">
         <link rel="stylesheet" type="text/css" href="./css/loginform.css">
@@ -15,7 +15,7 @@
 	
       <div class="header">
       	<ul class="list">
-      		<li class="active">Notice-Board</li>
+      		<li class="active">Event-Alerts</li>
         <li class="notactive" onclick="document.getElementById('id01').style.display='block'"><a>LogIn </a></li>
 		 <li class="notactive" onclick="document.getElementById('id02').style.display='block'"><a>SignUp</a></li>
 		 

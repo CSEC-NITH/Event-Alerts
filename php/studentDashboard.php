@@ -91,11 +91,11 @@
                 ?>
 			</div>
 			<div class="list">
-				<div class="list_element"><img src="../images/home.png" width="25px" height="25px" class="home"><a onclick="showNotification('showme')">Home</a></div>
-				<div class="list_element"><img src="../images/profile.png" width="25px" height="25px" class="profile"><a onclick="showProfile('showme')">Profile</a></div>
+				<div class="list_element" onclick="showNotification('showme')"><img src="../images/home.png" width="25px" height="25px" class="home" ><a >Home</a></div>
+				<div class="list_element" onclick="showProfile('showme')"><img src="../images/profile.png" width="25px" height="25px" class="profile"><a >Profile</a></div>
 				<div class="list_element"><img src="../images/chat.png" width="28px" height="25px" class="chat"><a href="./chatbox.php" target="_blank">Chat</a></div>
-				<div class="list_element"><img src="../images/feedback.gif" width="25px" height="25px" class="notification"><a onclick="showAbout('showme')">About</a></div>
-				<div class="list_element"><img src="../images/logout.png" width="25px" height="25px" class="logout"><a href="./logout.php">Logout</a></div>
+				<div class="list_element" onclick="showAbout('showme')"><img src="../images/feedback.gif" width="25px" height="25px" class="about"><a >About</a></div>
+				<div class="list_element" ><img src="../images/logout.png" width="25px" height="25px" class="logout"><a href="./logout.php">Logout</a></div>
 			</div>
 		</div>
 		<div class = "mainContent" id="content">
