@@ -14,6 +14,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="../css/about.css">
 	<link rel="stylesheet" type="text/css" href="../css/home.css">
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
      <script>

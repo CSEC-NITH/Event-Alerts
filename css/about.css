@@ -3,32 +3,38 @@
 	padding: 0px;
 }
 
-.main{
-	/*background: green;*/
+.about_main{
+	background:  #D3D3D3;
 	width: 100%;
-	height: 605px;
+	height: 100%;
+	overflow: auto;
+	position: static;
 }
 
 .about_div{
 	/*background: red;*/
+	font-family: Trebuchet MS;
 	width: 100%;
-	height: 310px;
+	height: auto;
 	padding-top:50px; 
 }
 
 .about_img{
-	width: 300px;
-	height: 300px;
-	/*background: yellow;*/
+	width: 25%;
+	height: auto;
+	background: yellow;
+	margin-top: 9%;
+	float: left;
 	margin-left: 4%;
 	box-shadow: 1px 2px 3px 3px rgba(0,0,0,0.5);
+	overflow: auto;
 }
 
 .about_content{
-	width: 720px;
-	height: 300px;
-	/*background: cyan;*/
-	position: absolute;
+	width: 50%;
+	height: auto;
+	margin-left: 5%;
+	float: left;
 	top: 50px;
 	left: 350px;
 }
@@ -48,4 +54,20 @@
 	margin-top: 30px;
 	font-size: 18px;
 	color: rgba(0,0,0,0.7);
+}
+@media(max-width: 700px){
+	.about_img{
+		float: none;
+		align:center;
+		width: 90%;
+		height: auto;
+		margin-top: 5%;
+	}
+
+.about_content{
+	float: none;
+	width: 90%;
+	height: auto;
+}
+
 }
