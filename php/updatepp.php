@@ -2,6 +2,9 @@
 	
 
 	session_start();
+    if(!isset($_SESSION['user'])){
+        header("Location : ../index.php");
+    } 
 	include('conn.php');
 	
 	$username = $_SESSION['user'];

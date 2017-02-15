@@ -10,16 +10,24 @@
 	// else{
 	// 	echo "<h1>connection Successful</h1>";
 	// }
+	session_start();
 	$user_name=$_POST["uname"];
 	$pwd=$_POST["psw"];
-	$query='select * from USER where USERNAME="'.$user_name.'" and PASSWORD="'.$pwd.'"';
-	$retval=mysqli_query($conn,$query);
-	if(mysqli_num_rows($retval)>0){
-		session_start();
-		$_SESSION["user"]=$user_name;
-		header("location: ./studentDashboard.php");
+	
+	if (isset($_POST['uname'])&&isset($_POST['psw'])) {
+		$query='select * from USER where USERNAME="'.$user_name.'" and PASSWORD="'.$pwd.'"';
+		$retval=mysqli_query($conn,$query);
+		if(mysqli_num_rows($retval)>0){
+			session_start();
+			$_SESSION["user"]=$user_name;
+			header("location: ./studentDashboard.php");
+		}
+		else{
+			echo "<script type='text/javascript'>alert('Username or Password is incorrect');window.location.href='../index.php';</script>";
+		}		
 	}
 	else{
-		echo "<script type='text/javascript'>alert('Username or Password is incorrect');window.location.href='../index.php';</script>";
+		header('Location: ../index.php');
 	}
+
 ?>

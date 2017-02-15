@@ -6,8 +6,6 @@
  * Time: 6:22 PM
  */
     session_start();
-	//if(isset($_SESSION['user']))
-    //{
         require 'conn.php';
         ?>
         <center>
@@ -45,8 +43,10 @@
         }
         //echo $drname."<br>";
         $conn->close();
+
         //echo $drname."<br>";
     /*}
     else
         header("Location: index.php");
 	?>*/
+    ?>

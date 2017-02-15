@@ -28,4 +28,3 @@
     </form>
 </div>
 </center>
-<?php

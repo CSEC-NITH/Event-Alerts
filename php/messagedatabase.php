@@ -1,12 +1,12 @@
 <?php
 // Start the session
-session_start();
+    session_start();
 		$servername = "localhost";
 		$username = "root";
 		$password = "nd123.in";
 		$dbname = "HACKATHON";
 		$conn = new mysqli($servername, $username, $password, $dbname);
-		//echo "Mukesh";
+		
 		if ($conn->connect_error) {
 		    die("Connection failed: " . $conn->connect_error);
 		}

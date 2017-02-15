@@ -3,6 +3,7 @@
     width: 100%;
     background-color: #33404d;
     border: black 2px solid;
+    cursor: pointer;
 }
 #combine {
     height: auto;
@@ -83,9 +84,18 @@
     float: left;
     background-color: #33404d;
 }
+#smbutton{
+    padding-left: 1%;
+    color: white;
+    width: auto;
+    display: inline;
+    float: left;
+    background-color: #33404d;
+}
 #ltext{
     color: white;
     text-decoration-line: unset;
+    text-decoration: none;
 }
 #ltext:hover {
     color: khaki;
